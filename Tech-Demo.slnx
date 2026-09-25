@@ -1,0 +1,10 @@
+﻿<Solution>
+  <Project Path="Unity.Netcode.Runtime.Tests.csproj" />
+  <Project Path="Unity.Netcode.Runtime.csproj" />
+  <Project Path="Unity.Netcode.Editor.Tests.csproj" />
+  <Project Path="Unity.Netcode.Editor.csproj" />
+  <Project Path="Unity.Netcode.Editor.CodeGen.csproj" />
+  <Project Path="Assembly-CSharp-Editor.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="Unity.Netcode.PackageChecker.Editor.csproj" />
+</Solution>
