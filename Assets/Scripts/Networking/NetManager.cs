@@ -5,8 +5,7 @@ using UnityEngine;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Steamworks.Data;
-using Unity.VisualScripting;
-using NUnit.Framework.Constraints;
+using Netcode.Transports.Facepunch;
 
 // Network manager to handle the overall network
 public class NetManager : NetworkManager
@@ -114,7 +113,7 @@ public class NetManager : NetworkManager
             if (ulong.TryParse(hostIDString, out ulong hostSteamID))
             {
                 var transport = this.GetComponent<FacepunchTransport>();
-                transport.targetSteamID = hostSteamID;
+                transport.targetSteamId = hostSteamID;
 
                 // Pack your own ID and join
                 SendPayload();
@@ -124,7 +123,7 @@ public class NetManager : NetworkManager
             else
             {
                 throw new Exception("Could not post the HostSteamID, either null or invalid: " + hostIDString);
-            }
+            } 
         } catch (Exception e) 
         {
             Debug.LogError($"Client encountered an error: {e.Message}");
